@@ -1,0 +1,73 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 21,
+      "patch": 0
+    },
+    "configurePresets": [
+      {
+        "name": "debug",
+        "displayName": "debug",
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/build/debug",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "debug"
+        }
+      },
+      {
+        "name": "release",
+        "displayName": "release",
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/build/release",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "release"
+        }
+      },
+      {
+        "name": "debug_test",
+        "displayName": "debug_test",
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/build/debug",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "debug"
+        }
+      },
+      {
+        "name": "release_test",
+        "displayName": "release_test",
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/build/release",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "debug"
+        }
+      }
+    ],
+    "buildPresets": [
+      {
+        "name": "release",
+        "configurePreset": "release",
+        "jobs": 4
+      },
+      {
+        "name": "debug",
+        "configurePreset": "debug",
+        "jobs": 4
+      }
+    ],
+    "testPresets": [
+      {
+        "name": "release",
+        "configurePreset": "release_test",
+        "output": {"outputOnFailure": true},
+        "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      },
+      {
+        "name": "debug",
+        "configurePreset": "debug_test",
+        "output": {"outputOnFailure": true},
+        "execution": {"noTestsAction": "error", "stopOnFailure": true}
+      }
+    ]
+  }
+  

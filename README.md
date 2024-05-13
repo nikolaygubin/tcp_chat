@@ -1,4 +1,4 @@
-# TO build run this commands:
+# TO build execute this commands:
 
 ## git submodules update --init --recursive
 

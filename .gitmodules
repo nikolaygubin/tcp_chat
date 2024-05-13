@@ -1,3 +1,0 @@
-[submodule "external/json_parse"]
-	path = external/json_parse
-	url = https://github.com/nlohmann/json.git

@@ -19,8 +19,8 @@ else()
   message("clang-tidy found:\n" ${CLANG_TIDY_VERSION})
 endif()
 
-include_directories(external/jsonparse/include)
+include_directories(external/json_parse/include)
 include_directories(include)
 
-add_subdirectory(external/jsonparse)
+add_subdirectory(external/json_parse)
 add_subdirectory(src)

@@ -1,6 +1,6 @@
 # TO build execute this commands:
 
-## git submodules update --init --recursive
+## git submodule update --init --recursive
 
 ## cmake --preset release
 ## cmake --build --preset release
